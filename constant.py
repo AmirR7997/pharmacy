@@ -17,3 +17,12 @@ def get_recipy_sql(chat_id):
               FROM user
               WHERE id = {chat_id}"""
     return sql
+
+def update_user_filed_sql(chat_id, filed_name, value):
+    sql = f"UPDATE user SET {filed_name} = '{value}' WHERE id = {chat_id}"
+    return sql
+
+def get_integer_flag_sql(column_name, table_name, chat_id):
+    sql = f"SELECT {column_name} FROM {table_name} WHERE id = {chat_id}"
+    return sql
+
